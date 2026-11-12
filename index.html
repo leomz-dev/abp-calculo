@@ -219,7 +219,7 @@
 
     .board-note {
       border: 2px dashed rgba(168, 85, 247, 0.4);
-      background: rgba(168, 85, 247, 0.05);
+      background: #ffffff;
       border-radius: 12px;
       padding: 20px;
       text-align: center;
@@ -523,79 +523,7 @@
     </div>
   </div>
 
-  <!-- DIAPOSITIVA 4: DOMINIO Y LÍMITES -->
-  <div class="slide-container">
-    <div class="eyebrow">Paso 3 · Análisis Continuo vs Discreto</div>
-    <h2 class="slide-title">Dominio de la función y comportamiento en los límites</h2>
-
-    <div class="limits-layout">
-      <div>
-        <div class="card" style="margin-bottom: 20px;">
-          <h4 style="color: #38bdf8; font-size: 15px; margin-bottom: 10px;">Dominio del Modelo</h4>
-          <p style="font-size: 13px; color: #94a3b8; margin-bottom: 8px;">Para aplicar las herramientas del cálculo diferencial:</p>
-          <div style="font-size: 15px; background: rgba(0,0,0,0.3); padding: 8px; border-radius: 6px; text-align: center;">
-            \[D_C = (0, \infty)\]
-          </div>
-          <p style="font-size: 12px; color: #64748b; margin-top: 8px;">
-            * En operación real: \(x \in \{1, 2, 3, \ldots\}\) (variables discretas).
-          </p>
-        </div>
-
-        <div class="card">
-          <h4 style="color: #a855f7; font-size: 15px; margin-bottom: 10px;">Comportamiento en los Extremos</h4>
-          <div style="font-size: 13px;">
-            <p style="margin-bottom: 8px;">1. Al aproximarse a cero instancias:</p>
-            <div style="background: rgba(0,0,0,0.3); padding: 6px; border-radius: 6px; text-align: center;">
-              \[\lim_{x \to 0^+} C(x) = +\infty\]
-            </div>
-            <p style="font-size: 11px; color: #64748b; margin-top: 4px;">Dominado por el término \(\frac{450}{x}\) (saturación).</p>
-            
-            <p style="margin: 12px 0 8px 0;">2. Al crecer indefinidamente:</p>
-            <div style="background: rgba(0,0,0,0.3); padding: 6px; border-radius: 6px; text-align: center;">
-              \[\lim_{x \to +\infty} C(x) = +\infty\]
-            </div>
-            <p style="font-size: 11px; color: #64748b; margin-top: 4px;">Dominado por el término \(2x\) (costos de red).</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Gráfica de la función -->
-      <div class="card" style="height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-        <div style="font-size: 12px; color: #94a3b8; margin-bottom: 10px;">Curva de Costo Operativo \(C(x)\)</div>
-        <svg width="460" height="300" viewBox="0 0 460 300" fill="none">
-          <!-- Grid lines -->
-          <line x1="50" y1="40" x2="50" y2="250" stroke="#334155" stroke-width="2"/>
-          <line x1="50" y1="250" x2="420" y2="250" stroke="#334155" stroke-width="2"/>
-          
-          <!-- Axis Labels -->
-          <text x="410" y="280" fill="#94a3b8" font-size="11" text-anchor="end">Instancias activas (x)</text>
-          <text x="40" y="30" fill="#94a3b8" font-size="11" text-anchor="start">Costo (USD/h)</text>
-          
-          <!-- Curve -->
-          <path d="M 65 50 Q 80 210 210 200 T 400 60" stroke="#a855f7" stroke-width="3" fill="none"/>
-
-          <!-- Minimum Point -->
-          <circle cx="210" cy="200" r="6" fill="#38bdf8"/>
-          <line x1="210" y1="200" x2="210" y2="250" stroke="#38bdf8" stroke-width="1" stroke-dasharray="4 4"/>
-          <line x1="50" y1="200" x2="210" y2="200" stroke="#38bdf8" stroke-width="1" stroke-dasharray="4 4"/>
-          
-          <text x="210" y="270" fill="#38bdf8" font-size="12" font-weight="bold" text-anchor="middle">x = 15</text>
-          <text x="40" y="204" fill="#38bdf8" font-size="11" font-weight="bold" text-anchor="end">$70</text>
-          
-          <!-- Asymptote Indicators -->
-          <text x="80" y="80" fill="#a855f7" font-size="10">lim → +∞ (x→0)</text>
-          <text x="330" y="90" fill="#a855f7" font-size="10">lim → +∞ (x→∞)</text>
-        </svg>
-      </div>
-    </div>
-
-    <div class="footer-note">
-      <span>El costo crece hacia ambos extremos del dominio continuo</span>
-      <span>Cálculo Diferencial</span>
-    </div>
-  </div>
-
-  <!-- DIAPOSITIVA 5: PRIMERA DERIVADA -->
+  <!-- DIAPOSITIVA 4: PRIMERA DERIVADA -->
   <div class="slide-container">
     <div class="eyebrow">Pasos 4 y 5 · Optimización</div>
     <h2 class="slide-title">Cálculo de la primera derivada y punto crítico</h2>
@@ -630,18 +558,9 @@
         </div>
       </div>
 
-      <!-- Tablero interactivo visual -->
-      <div class="board-note" style="height: 100%; display: flex; flex-direction: column; justify-content: center;">
-        <i class="fa-solid fa-chalkboard-user" style="font-size: 36px; color: #a855f7; margin-bottom: 16px;"></i>
-        <h3 style="color: #fff; font-size: 18px; margin-bottom: 12px;">Desarrollo en el Tablero</h3>
-        <p style="font-size: 14px; color: #94a3b8; line-height: 1.6; text-align: left; max-width: 400px; margin: 0 auto;">
-          Durante la exposición oral se profundizará en:
-        </p>
-        <ul style="text-align: left; max-width: 400px; margin: 12px auto 0 auto; font-size: 13px; color: #cbd5e1; line-height: 1.8;">
-          <li><i class="fa-solid fa-check highlight-cyan"></i> Aplicación paso a paso de \(\frac{d}{dx}(x^n) = n x^{n-1}\).</li>
-          <li><i class="fa-solid fa-check highlight-cyan"></i> Justificación de la anulación de la constante (10).</li>
-          <li><i class="fa-solid fa-check highlight-cyan"></i> Descarte de la raíz negativa \(x = -15\) por restricción física del dominio.</li>
-        </ul>
+      <!-- Espacio libre para explicar en el tablero -->
+      <div class="board-note" style="height: 100%; display: flex; flex-direction: column;">
+        <h3 style="color: #0f172a; font-size: 18px; margin: 0;">Espacio para explicar</h3>
       </div>
     </div>
 
@@ -651,7 +570,7 @@
     </div>
   </div>
 
-  <!-- DIAPOSITIVA 6: SEGUNDA DERIVADA Y TABLA -->
+  <!-- DIAPOSITIVA 5: SEGUNDA DERIVADA Y TABLA -->
   <div class="slide-container">
     <div class="eyebrow">Pasos 6 y 7 · Verificación y Comparación</div>
     <h2 class="slide-title">Criterio de la segunda derivada y tabla de costos</h2>
@@ -711,7 +630,7 @@
     </div>
   </div>
 
-  <!-- DIAPOSITIVA 7: CONCLUSIÓN E IMPACTO -->
+  <!-- DIAPOSITIVA 6: CONCLUSIÓN E IMPACTO -->
   <div class="slide-container">
     <div class="eyebrow">Conclusión · Aplicación en Ingeniería</div>
     <h2 class="slide-title">Resultados e impacto en sistemas cloud</h2>
